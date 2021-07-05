@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package instruments;
+
+/* go_package
+
+ Defines the import path of the package,
+ which will contain all the generated code for this file.
+*/
+option go_package = "github.com/abstractmachines/grpc-go";
+
+
+/* Message Definitions : Typed Fields
+
+The " = 1", " = 2" markers on each element identify the unique "tag" that field
+uses in the binary encoding.
+Tag numbers 1-15 require one less byte to encode than higher numbers, so as an
+optimization you can decide to use those tags for the commonly used or repeated
+elements, leaving tags 16 and higher for less-commonly used optional elements.
+
+Default values for fields that aren't set. Empty string, bools false ...
+*/
+message InstrumentResponse {
+  int32 id = 1;
+  string make = 2;
+  string model = 3;
+  int32 year = 4;
+  string condition = 5;
+  bool has_hsc = 6;
+}
+
+message InstrumentRequest {
+  int32 id = 1;
+}
+
+service Instrument {
+  rpc GetInstrument (InstrumentRequest) returns (InstrumentResponse) {}
+}
