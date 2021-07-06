@@ -2,6 +2,11 @@
 
 ## Runbook
 
+```
+go get -u google.golang.org/grpc
+go get -u github.com/golang/protobuf/protoc-gen-go
+```
+
 ### Go Modules go mod init 
 - See: blog.golang.org/using-go-modules
 
