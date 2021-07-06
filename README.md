@@ -1,5 +1,17 @@
 # grpc-go
 
+gRPC, protobufs, Go
+
+## References:
+- [Google Developers Protobuf Tutorial] (https://developers.google.com/protocol-buffers/docs/gotutorial)
+- [gRPC quickstart](https://grpc.io/docs/languages/go/quickstart/)
+
+## Working with Protobufs (high level)
+
+1. Define data structures in a .proto file.
+2. Compile that file to generate server methods and related client stubs for those same methods.
+3. Profit.
+
 ## Motivation
 
 > Distributed Systems and Services
@@ -15,10 +27,6 @@ When we use the `protoc` compiler, that generates data access methods (getters, 
 _The protobuf compiler encodes into an efficient binary format._ 
 
 _The generated code takes care of the underlying details of reading/writing to/from services for us._
-
-## References:
-- [Google Developers Protobuf Tutorial] (https://developers.google.com/protocol-buffers/docs/gotutorial)
-- [gRPC quickstart](https://grpc.io/docs/languages/go/quickstart/)
 
 ## Runbook
 
