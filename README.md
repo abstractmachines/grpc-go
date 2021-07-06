@@ -5,6 +5,7 @@ gRPC, protobufs, Go
 ## References:
 - [Google Developers Protobuf Tutorial] (https://developers.google.com/protocol-buffers/docs/gotutorial)
 - [gRPC quickstart](https://grpc.io/docs/languages/go/quickstart/)
+- [Ben Johnson on "Structuring a Go project with multiple binaries"](https://medium.com/@benbjohnson/structuring-applications-in-go-3b04be4ff091)
 
 ## Working with Protobufs (high level)
 
