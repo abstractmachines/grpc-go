@@ -1,6 +1,22 @@
 # grpc-go
 
-References:
+## Motivation
+
+> Distributed Systems and Services
+
+With gRPC, a client can "directly" call a method on a server, as if it were a local object. _The client has "stubs" of the server's methods._
+
+This makes creating distributed applications and services a lot easier than thinking of clients and servers/services as having separate "methods."
+
+> Performance
+
+When we use the `protoc` compiler, that generates data access methods (getters, setters et al). 
+
+_The protobuf compiler encodes into an efficient binary format._ 
+
+_The generated code takes care of the underlying details of reading/writing to/from services for us._
+
+## References:
 - [Google Developers Protobuf Tutorial] (https://developers.google.com/protocol-buffers/docs/gotutorial)
 - [gRPC quickstart](https://grpc.io/docs/languages/go/quickstart/)
 
