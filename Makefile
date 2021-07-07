@@ -1,5 +1,9 @@
 build_tmp=bin/
 
+.PHONY: list
+list:
+	@grep '^[^#[:space:]].*:' Makefile
+
 .PHONY: tidy
 tidy:
 	go mod tidy
