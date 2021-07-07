@@ -7,7 +7,7 @@ package instruments;
  Defines the import path of the package,
  which will contain all the generated code for this file.
 */
-option go_package = "github.com/abstractmachines/grpc-go";
+option go_package = "github.com/abstractmachines/grpc-go/instruments";
 
 
 /* Message Definitions : Typed Fields

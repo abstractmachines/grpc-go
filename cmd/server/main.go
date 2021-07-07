@@ -7,8 +7,7 @@ import (
 	"net"
 
 	"google.golang.org/grpc"
-	// TODO fix
-	pb "github.com/abstractmachines/grpc-go"
+	pb "github.com/abstractmachines/grpc-go/instruments"
 )
 
 const (
