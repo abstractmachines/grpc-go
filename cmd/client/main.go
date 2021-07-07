@@ -4,17 +4,17 @@ package main
 import (
 	"context"
 	"log"
-	"os"
+	// "os"
+	// "strconv"
 	"time"
 
 	"google.golang.org/grpc"
-	// TODO fix
-	pb "github.com/abstractmachines/grpc-go"
+	pb "github.com/abstractmachines/grpc-go/instruments"
 )
 
 const (
 	address     = "localhost:50051"
-	defaultId = 123
+	defaultId int32 = 123
 )
 
 func main() {
@@ -28,14 +28,18 @@ func main() {
 
 	// Contact the server and print out its response.
 	id := defaultId
-	if len(os.Args) > 1 {
-		id = os.Args[1]
-	}
+	// if len(os.Args) > 1 { // later we'll care about argv.
+	// 	// id = os.Args[1]
+	// 	idStr := os.Args[1]
+	// 	idInt, err = strconv.Atoi(idStr)
+	// 	id = int32(idInt)
+	// 	// TODO if err, bad, gib feedback
+	// }
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
-	r, err := c.GetInstrument(ctx, &pb.HelloRequest{Id: id})
+	r, err := c.GetInstrument(ctx, &pb.InstrumentRequest{Id: id})
 	if err != nil {
 		log.Fatalf("could not greet: %v", err)
 	}
-	log.Printf("Greeting: %s", r.GetMessage())
+	log.Printf("henlo world. and the id: %s", r.GetId())
 }
