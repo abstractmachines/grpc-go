@@ -21,8 +21,8 @@ type server struct {
 
 // GetInstrument implements InstrumentServer
 func (s *server) GetInstrument(ctx context.Context, in *pb.InstrumentRequest) (*pb.InstrumentResponse, error) {
-	log.Printf("Received: %v", in.GetName())
-	return &pb.InstrumentResponse{Message: "Hello " + in.GetName()}, nil
+	log.Printf("Received: %v", in.GetId())
+	return &pb.InstrumentResponse{Id: 456 + in.GetId()}, nil
 }
 
 func main() {
